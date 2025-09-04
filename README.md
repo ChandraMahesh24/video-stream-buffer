@@ -26,13 +26,11 @@ This module requires:
 - OpenCV (`opencv-python`)
 - `threading`, `time`, `pathlib`, `logging` (standard libs)
 
-Install OpenCV with:
+pip install opencv-pytho:
 
 ```bash
-pip install opencv-python
 
-
-Using with RTSP Stream
+Using with RTSP Stream:
 
 import cv2
 from video_capture_buffer import VideoCaptureBuffer    #Import and Initialize
