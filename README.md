@@ -32,11 +32,12 @@ Install OpenCV with:
 pip install opencv-python
 
 
+Using with RTSP Stream
 
 import cv2
-from video_capture_buffer import VideoCaptureBuffer
+from video_capture_buffer import VideoCaptureBuffer    #Import and Initialize
 
-rtsp_url = "rtsp://username:password@ip_address:port/stream"
+rtsp_url = "rtsp://username:password@ip_address:port/stream"     #Use with RTSP Stream
 vcb = VideoCaptureBuffer(rtsp_url)
 
 while True:
