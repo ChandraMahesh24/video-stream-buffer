@@ -31,3 +31,23 @@ Install OpenCV with:
 ```bash
 pip install opencv-python
 
+
+
+import cv2
+from video_capture_buffer import VideoCaptureBuffer
+
+rtsp_url = "rtsp://username:password@ip_address:port/stream"
+vcb = VideoCaptureBuffer(rtsp_url)
+
+while True:
+    success, frame = vcb.read()
+    if success:
+        cv2.imshow("Video Stream", frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+vcb.release()
+cv2.destroyAllWindows()
+
+
